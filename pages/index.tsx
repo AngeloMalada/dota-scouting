@@ -13,46 +13,46 @@ const HomePage = () => {
       <Link href={'/team/2'}>
         <button className='bg-blue-500 rounded-xl p-10'>Team Panda</button>
       </Link>
-      <Link href={'/team/21243123'}>
+      <Link href={'/team/2'}>
         <button className='bg-blue-500 rounded-xl p-10'>Team Panda</button>
       </Link>
-      <Link href={'/team/21243123'}>
+      <Link href={'/team/2'}>
         <button className='bg-blue-500 rounded-xl p-10'>Team Panda</button>
       </Link>
-      <Link href={'/team/21243123'}>
+      <Link href={'/team/2'}>
         <button className='bg-blue-500 rounded-xl p-10'>Team Panda</button>
       </Link>
-      <Link href={'/team/21243123'}>
+      <Link href={'/team/2'}>
         <button className='bg-blue-500 rounded-xl p-10'>Team Panda</button>
       </Link>
-      <Link href={'/team/21243123'}>
+      <Link href={'/team/2'}>
         <button className='bg-blue-500 rounded-xl p-10'>Team Panda</button>
       </Link>
-      <Link href={'/team/21243123'}>
+      <Link href={'/team/2'}>
         <button className='bg-blue-500 rounded-xl p-10'>Team Panda</button>
       </Link>
-      <Link href={'/team/21243123'}>
+      <Link href={'/team/2'}>
         <button className='bg-blue-500 rounded-xl p-10'>Team Panda</button>
       </Link>
-      <Link href={'/team/21243123'}>
+      <Link href={'/team/2'}>
         <button className='bg-blue-500 rounded-xl p-10'>Team Panda</button>
       </Link>
-      <Link href={'/team/21243123'}>
+      <Link href={'/team/2'}>
         <button className='bg-blue-500 rounded-xl p-10'>Team Panda</button>
       </Link>
-      <Link href={'/team/21243123'}>
+      <Link href={'/team/2'}>
         <button className='bg-blue-500 rounded-xl p-10'>Team Panda</button>
       </Link>
-      <Link href={'/team/21243123'}>
+      <Link href={'/team/2'}>
         <button className='bg-blue-500 rounded-xl p-10'>Team Panda</button>
       </Link>
-      <Link href={'/team/21243123'}>
+      <Link href={'/team/2'}>
         <button className='bg-blue-500 rounded-xl p-10'>Team Panda</button>
       </Link>
-      <Link href={'/team/21243123'}>
+      <Link href={'/team/2'}>
         <button className='bg-blue-500 rounded-xl p-10'>Team Panda</button>
       </Link>
-      <Link href={'/team/21243123'}>
+      <Link href={'/team/2'}>
         <button className='bg-blue-500 rounded-xl p-10'>Team Panda</button>
       </Link>
     </div>
