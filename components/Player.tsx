@@ -30,7 +30,7 @@ const Player = ({ id, date, lobby }: Props) => {
 
   useEffect(() => {
     fetch(
-      `http://localhost:8080/stratz/?id=${playerid}&date=${date}&gamemode=${lobby}`,
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/stratz/?id=${playerid}&date=${date}&gamemode=${lobby}`,
     )
       .then((res) => res.json())
       .then((data) => setHeroes(data));
