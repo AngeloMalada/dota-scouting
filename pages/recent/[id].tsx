@@ -1,3 +1,5 @@
+//currently this page is not getting used so it is not updated to new api
+
 import React, { useEffect, useState } from 'react';
 
 type Props = {};
