@@ -4,24 +4,56 @@ import Link from 'next/link';
 
 const HomePage = () => {
   return (
-    <div className='flex flex-col items-center justify-center min-h-screen p-10 gap-10'>
+    <div className='grid grid-cols-4  mx-auto place-items-center min-h-screen p-10 gap-10'>
       <Link href={'/team/1'}>
-        <button className='bg-blue-500 rounded-xl p-10'>Team 1</button>
+        <button className='bg-blue-500 rounded-xl p-10 mx-auto'>
+          Team Panda
+        </button>
       </Link>
       <Link href={'/team/2'}>
-        <button className='bg-blue-500 rounded-xl p-10'>Team 2</button>
+        <button className='bg-blue-500 rounded-xl p-10'>Team Panda</button>
       </Link>
       <Link href={'/team/21243123'}>
-        <button className='bg-blue-500 rounded-xl p-10'>Team 3</button>
+        <button className='bg-blue-500 rounded-xl p-10'>Team Panda</button>
       </Link>
       <Link href={'/team/21243123'}>
-        <button className='bg-blue-500 rounded-xl p-10'>Team 4</button>
+        <button className='bg-blue-500 rounded-xl p-10'>Team Panda</button>
       </Link>
       <Link href={'/team/21243123'}>
-        <button className='bg-blue-500 rounded-xl p-10'>Team 5</button>
+        <button className='bg-blue-500 rounded-xl p-10'>Team Panda</button>
       </Link>
       <Link href={'/team/21243123'}>
-        <button className='bg-blue-500 rounded-xl p-10'>Team 6</button>
+        <button className='bg-blue-500 rounded-xl p-10'>Team Panda</button>
+      </Link>
+      <Link href={'/team/21243123'}>
+        <button className='bg-blue-500 rounded-xl p-10'>Team Panda</button>
+      </Link>
+      <Link href={'/team/21243123'}>
+        <button className='bg-blue-500 rounded-xl p-10'>Team Panda</button>
+      </Link>
+      <Link href={'/team/21243123'}>
+        <button className='bg-blue-500 rounded-xl p-10'>Team Panda</button>
+      </Link>
+      <Link href={'/team/21243123'}>
+        <button className='bg-blue-500 rounded-xl p-10'>Team Panda</button>
+      </Link>
+      <Link href={'/team/21243123'}>
+        <button className='bg-blue-500 rounded-xl p-10'>Team Panda</button>
+      </Link>
+      <Link href={'/team/21243123'}>
+        <button className='bg-blue-500 rounded-xl p-10'>Team Panda</button>
+      </Link>
+      <Link href={'/team/21243123'}>
+        <button className='bg-blue-500 rounded-xl p-10'>Team Panda</button>
+      </Link>
+      <Link href={'/team/21243123'}>
+        <button className='bg-blue-500 rounded-xl p-10'>Team Panda</button>
+      </Link>
+      <Link href={'/team/21243123'}>
+        <button className='bg-blue-500 rounded-xl p-10'>Team Panda</button>
+      </Link>
+      <Link href={'/team/21243123'}>
+        <button className='bg-blue-500 rounded-xl p-10'>Team Panda</button>
       </Link>
     </div>
   );
