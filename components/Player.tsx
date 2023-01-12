@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 type Props = {
   id: number;
   date: number;
+  lobby: string;
 };
 
 type PlayerData = {
@@ -15,25 +16,25 @@ type PlayerData = {
   winrateAgainstPlayer: string;
   image_url: string;
   proWinrate: string;
-  name: string;
+  Name: string;
   withWin: number;
   withGames: number;
   playerName: string;
   imp: number;
   messege: string;
 };
-const Player = ({ id, date }: Props) => {
+const Player = ({ id, date, lobby }: Props) => {
   const [playerid, setPlayerId] = useState<any>(id);
   const [heroes, setHeroes] = useState<PlayerData[]>([]);
   const [search, setSearch] = useState<number>(id);
 
   useEffect(() => {
     fetch(
-      `${process.env.NEXT_PUBLIC_SERVER_URL}/stratz/?id=${playerid}&date=${date}`,
+      `http://localhost:8080/stratz/?id=${playerid}&date=${date}&gamemode=${lobby}`,
     )
       .then((res) => res.json())
       .then((data) => setHeroes(data));
-  }, [search, date]);
+  }, [search, date, lobby]);
 
   console.log(heroes);
 
@@ -121,7 +122,7 @@ const Player = ({ id, date }: Props) => {
                     key={hero.id}
                     className='flex flex-col items-center shadow-lg rounded-lg p-4 gap-2 font-semibold'
                   >
-                    <h1>{hero.name}</h1>
+                    <h1>{hero.Name}</h1>
                     <img
                       src={hero.image_url}
                       alt=''
