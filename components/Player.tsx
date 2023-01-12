@@ -28,7 +28,9 @@ const Player = ({ id, date }: Props) => {
   const [search, setSearch] = useState<number>(id);
 
   useEffect(() => {
-    fetch(`http://localhost:8080/stratz/?id=${playerid}&date=${date}`)
+    fetch(
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/stratz/?id=${playerid}&date=${date}`,
+    )
       .then((res) => res.json())
       .then((data) => setHeroes(data));
   }, [search, date]);
