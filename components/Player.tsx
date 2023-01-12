@@ -4,9 +4,6 @@ type Props = {
 };
 const Player = (id: Props) => {
   const [playerid, setPlayerId] = useState<number>(id.id);
-
-  const [player, setPlayer] = useState<any>([]);
-  const [playerHeroes, setPlayerHeroes] = useState<any>([]);
   const [heroes, setHeroes] = useState<any>([]);
 
   useEffect(() => {
@@ -56,12 +53,19 @@ const Player = (id: Props) => {
               <h1>
                 Points:{' '}
                 {(
-                  hero.games *
-                  hero.win *
-                  ((Number(hero.winrateAtPlayerLevel) +
-                    Number(hero.winrateAgainstPlayer)) /
-                    2) *
-                  Number(hero.proWinrate)
+                  (1000 *
+                    (hero.games *
+                      hero.win *
+                      ((Number(hero.winrateAtPlayerLevel) +
+                        Number(hero.winrateAgainstPlayer)) /
+                        2) *
+                      Number(hero.proWinrate))) /
+                  (heroes[0].games *
+                    heroes[0].win *
+                    ((Number(heroes[0].winrateAtPlayerLevel) +
+                      Number(heroes[0].winrateAgainstPlayer)) /
+                      2) *
+                    Number(heroes[0].proWinrate))
                 ).toFixed(0)}
               </h1>
             </div>
