@@ -1,3 +1,4 @@
+import { useQuery, useQueryClient } from '@tanstack/react-query';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 
@@ -23,41 +24,56 @@ type PlayerData = {
   imp: number;
   messege: string;
 };
+
+async function getHeroes(id: number, date: number, lobby: string) {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_SERVER_URL}/stratz/?id=${id}&date=${date}&gamemode=${lobby}`,
+  );
+  return res.json();
+}
+
 const Player = ({ id, date, lobby }: Props) => {
   const [playerid, setPlayerId] = useState<any>(id);
-  const [heroes, setHeroes] = useState<PlayerData[]>([]);
-  const [search, setSearch] = useState<number>(id);
+  // const [heroes, setHeroes] = useState<PlayerData[]>([]);
+  const [search, setSearch] = useState<any>(id);
 
-  useEffect(() => {
-    fetch(
-      `${process.env.NEXT_PUBLIC_SERVER_URL}/stratz/?id=${playerid}&date=${date}&gamemode=${lobby}`,
-    )
-      .then((res) => res.json())
-      .then((data) => setHeroes(data));
-  }, [search, date, lobby]);
+  // useEffect(() => {
+  //   fetch(
+  //     `${process.env.NEXT_PUBLIC_SERVER_URL}/stratz/?id=${playerid}&date=${date}&gamemode=${lobby}`,
+  //   )
+  //     .then((res) => res.json())
+  //     .then((data) => setHeroes(data));
+  // }, [search, date, lobby]);
 
-  console.log(heroes);
+  const QueryQlient = useQueryClient();
+
+  const {
+    data: heroes,
+    isLoading,
+    error,
+  } = useQuery(['getHeroes', playerid, date, lobby], () =>
+    getHeroes(playerid, date, lobby),
+  );
 
   return (
     <>
-      {heroes.length > 0 ? (
+      {heroes ? (
         heroes[0]?.messege === 'No data' ? (
-          <div className='flex flex-col gap-4 mt-10'>
+          <div className='flex flex-col gap-4 mt-10 w-1/6'>
             <form action='' className='flex flex-col items-center gap-4'>
               <input
                 className='border-2 border-black rounded-lg p-2 text-center'
                 type='text'
                 name='id'
                 id='id'
-                value={playerid}
-                onChange={(e) => setPlayerId(e.target.value)}
+                onChange={(e) => setSearch(e.target.value)}
               />
               <button
                 className='border-2 bg-blue-500 text-white rounded-lg p-2'
                 type='submit'
                 onClick={(e) => {
                   e.preventDefault();
-                  setSearch(playerid);
+                  setPlayerId(search);
                 }}
               >
                 Search
@@ -66,27 +82,26 @@ const Player = ({ id, date, lobby }: Props) => {
             <h1 className='text-center uppercase font-bold'>
               {heroes[0].playerName}
             </h1>
-            <h1 className='text-center font-bold uppercase'>
+            <h1 className='text-center font-bold uppercase w-[50%] flex mx-auto'>
               Player didnt play in period you selected or he has private profile
             </h1>
           </div>
         ) : (
-          <div className='flex flex-col gap-4 mt-10'>
+          <div className='flex flex-col gap-4 mt-10 w-1/6'>
             <form action='' className='flex flex-col items-center gap-4'>
               <input
                 className='border-2 border-black rounded-lg p-2 text-center'
                 type='text'
                 name='id'
                 id='id'
-                value={playerid}
-                onChange={(e) => setPlayerId(e.target.value)}
+                onChange={(e) => setSearch(e.target.value)}
               />
               <button
                 className='border-2 bg-blue-500 text-white rounded-lg p-2'
                 type='submit'
                 onClick={(e) => {
                   e.preventDefault();
-                  setSearch(playerid);
+                  setPlayerId(search);
                 }}
               >
                 Search
@@ -114,14 +129,12 @@ const Player = ({ id, date, lobby }: Props) => {
                       2) *
                     Number(a.proWinrate),
               )
-              .map((hero) => (
+              .map((hero: any) => (
                 <Link
                   href={`https://www.opendota.com/heroes/${hero.id}/matchups`}
+                  key={hero.id}
                 >
-                  <div
-                    key={hero.id}
-                    className='flex flex-col items-center shadow-lg rounded-lg p-4 gap-2 font-semibold'
-                  >
+                  <div className='flex flex-col items-center shadow-lg rounded-lg p-4 gap-2 font-semibold'>
                     <h1>{hero.Name}</h1>
                     <img
                       src={hero.image_url}
@@ -167,28 +180,27 @@ const Player = ({ id, date, lobby }: Props) => {
           </div>
         )
       ) : (
-        <div className='flex flex-col gap-4 mt-10'>
+        <div className='flex flex-col gap-4 mt-10 px-10 w-1/6'>
           <form action='' className='flex flex-col items-center gap-4'>
             <input
               className='border-2 border-black rounded-lg p-2 text-center'
               type='text'
               name='id'
               id='id'
-              value={playerid}
-              onChange={(e) => setPlayerId(e.target.value)}
+              onChange={(e) => setSearch(e.target.value)}
             />
             <button
               className='border-2 bg-blue-500 text-white rounded-lg p-2'
               type='submit'
               onClick={(e) => {
                 e.preventDefault();
-                setSearch(playerid);
+                setPlayerId(search);
               }}
             >
               Search
             </button>
           </form>
-          <img src='/rings.svg' className='w-48 aspect-square mt-40' />
+          <img src='/rings.svg' className='w-48 aspect-square mt-40 mx-auto' />
         </div>
       )}
       {/* if data is loaded and empty array is returned display "profile is private" */}

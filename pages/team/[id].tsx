@@ -18,49 +18,52 @@ const TeamPage = (id: any) => {
       {/* create input and a button that sets id to input value */}
       <h1 className='text-center font-bold uppercase'>Time period</h1>
       <div className='mx-auto w-full flex flex-row justify-center gap-4 mt-4 font-bold uppercase'>
-        <h1 className='bg-blue-500 p-4 rounded-lg' onClick={() => setDate(0)}>
+        <button
+          className='bg-blue-500 p-4 rounded-lg'
+          onClick={() => setDate(0)}
+        >
           All time
-        </h1>
-        <h1
+        </button>
+        <button
           className='bg-blue-500 p-4 rounded-lg'
           onClick={() =>
             setDate(Math.floor(new Date().getTime() / 1000.0) - 31536000)
           }
         >
           Last year
-        </h1>
-        <h1
+        </button>
+        <button
           className='bg-blue-500 p-4 rounded-lg'
           onClick={() =>
             setDate(Math.floor(new Date().getTime() / 1000.0) - 3 * 2592000)
           }
         >
           Last 3 months
-        </h1>
-        <h1
+        </button>
+        <button
           className='bg-blue-500 p-4 rounded-lg'
           onClick={() =>
             setDate(Math.floor(new Date().getTime() / 1000.0) - 3 * 2592000)
           }
         >
           Last month
-        </h1>
-        <h1
+        </button>
+        <button
           className='bg-blue-500 p-4 rounded-lg'
           onClick={() =>
             setDate(Math.floor(new Date().getTime() / 1000.0) - 604800)
           }
         >
           Last Week
-        </h1>
-        <h1
+        </button>
+        <button
           className='bg-blue-500 p-4 rounded-lg'
           onClick={() =>
             setDate(Math.floor(new Date().getTime() / 1000.0) - 259200)
           }
         >
           Last 3 days
-        </h1>
+        </button>
         <form action='' className='flex flex-row gap-4'>
           <input
             type='number'
@@ -87,30 +90,30 @@ const TeamPage = (id: any) => {
       <div className='flex flex-col w-full mx-auto justify-center items-center my-4 font-bold uppercase'>
         <h1 className='my-2'>Lobby type</h1>
         <div className='flex flex-row gap-4'>
-          <h1
+          <button
             className='bg-blue-500 p-4 rounded-lg'
             onClick={() => setLobby('7,1,0')}
           >
             All
-          </h1>
-          <h1
+          </button>
+          <button
             className='bg-blue-500 p-4 rounded-lg'
             onClick={() => setLobby('0')}
           >
             Unranked
-          </h1>
-          <h1
+          </button>
+          <button
             className='bg-blue-500 p-4 rounded-lg'
             onClick={() => setLobby('7')}
           >
             Ranked
-          </h1>
-          <h1
+          </button>
+          <button
             className='bg-blue-500 p-4 rounded-lg'
             onClick={() => setLobby('1')}
           >
             Practice
-          </h1>
+          </button>
         </div>
       </div>
       <div className='flex flex-row justify-between px-2 lg:px-10'>
