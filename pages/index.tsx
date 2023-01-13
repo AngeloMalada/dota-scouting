@@ -7,7 +7,7 @@ const HomePage = () => {
     <div className='flex flex-col items-center gap-40'>
       <div className='flex flex-col items-center gap-10'>
         <h1 className='uppercase font-bold text-3xl'>Division 1</h1>
-        <div className='grid grid-cols-4 items-center w-full px-20 place-items-center mx-auto gap-20'>
+        <div className='grid grid-cols-2 lg:grid-cols-4 items-center w-full px-20 place-items-center mx-auto gap-20'>
           {Teams.map((team: any) => {
             if (team.division === 'D1') {
               return (
@@ -27,7 +27,7 @@ const HomePage = () => {
       </div>
       <div className='flex flex-col items-center gap-10'>
         <h1 className='uppercase font-bold text-3xl'>Division 2</h1>
-        <div className='grid grid-cols-4 items-center w-full px-20 place-items-center mx-auto gap-20'>
+        <div className='grid grid-cols-2 lg:grid-cols-4  items-center w-full px-20 place-items-center mx-auto gap-20'>
           {Teams.map((team: any) => {
             if (team.division === 'D2') {
               return (
@@ -47,7 +47,7 @@ const HomePage = () => {
       </div>
       <div className='flex flex-col items-center gap-10'>
         <h1 className='uppercase font-bold text-3xl'>Division 3</h1>
-        <div className='grid grid-cols-4 items-center w-full px-20 place-items-center mx-auto gap-20'>
+        <div className='grid grid-cols-2 lg:grid-cols-4  items-center w-full px-20 place-items-center mx-auto gap-20'>
           {Teams.map((team: any) => {
             if (team.division === 'D3') {
               return (

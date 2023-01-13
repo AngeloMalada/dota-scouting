@@ -17,7 +17,7 @@ const TeamPage = (id: any) => {
     <div>
       {/* create input and a button that sets id to input value */}
       <h1 className='text-center font-bold uppercase'>Time period</h1>
-      <div className='mx-auto w-full flex flex-row justify-center gap-4 mt-4 font-bold uppercase'>
+      <div className='mx-auto w-4/5 lg:w-full flex flex-col lg:flex-row justify-center gap-4 mt-4 font-bold uppercase px-4'>
         <button
           className='bg-blue-500 p-4 rounded-lg'
           onClick={() => setDate(0)}
@@ -64,7 +64,10 @@ const TeamPage = (id: any) => {
         >
           Last 3 days
         </button>
-        <form action='' className='flex flex-row gap-4'>
+        <form
+          action=''
+          className='flex flex-col lg:flex-row gap-4 mx-auto lg:mx-0'
+        >
           <input
             type='number'
             className='bg-blue-500 p-4 rounded-lg text-black placeholder-black'
@@ -87,36 +90,36 @@ const TeamPage = (id: any) => {
           </button>
         </form>
       </div>
-      <div className='flex flex-col w-full mx-auto justify-center items-center my-4 font-bold uppercase'>
+      <div className='flex flex-col w-full mx-auto justify-center items-center my-4 font-bold uppercase '>
         <h1 className='my-2'>Lobby type</h1>
-        <div className='flex flex-row gap-4'>
+        <div className='flex flex-col lg:flex-row gap-4 w-3/4 lg:w-full items-center justify-center'>
           <button
-            className='bg-blue-500 p-4 rounded-lg'
+            className='bg-blue-500 p-4 rounded-lg w-full lg:w-fit'
             onClick={() => setLobby('7,1,0')}
           >
             All
           </button>
           <button
-            className='bg-blue-500 p-4 rounded-lg'
+            className='bg-blue-500 p-4 rounded-lg w-full lg:w-fit'
             onClick={() => setLobby('0')}
           >
             Unranked
           </button>
           <button
-            className='bg-blue-500 p-4 rounded-lg'
+            className='bg-blue-500 p-4 rounded-lg w-full lg:w-fit'
             onClick={() => setLobby('7')}
           >
             Ranked
           </button>
           <button
-            className='bg-blue-500 p-4 rounded-lg'
+            className='bg-blue-500 p-4 rounded-lg w-full lg:w-fit'
             onClick={() => setLobby('1')}
           >
             Practice
           </button>
         </div>
       </div>
-      <div className='flex flex-row justify-between px-2 lg:px-10'>
+      <div className='flex flex-col gap-10 lg:flex-row justify-between px-2 lg:px-10 items-center lg:items-baseline'>
         {Teams.map((team: any) => {
           if (Number(team.id) === Number(id.id)) {
             return (
