@@ -11,7 +11,8 @@ const TeamPage = (id: any) => {
   );
   const [lobby, setLobby] = React.useState<string>('7,1,0');
   const [customDays, setCustomDays] = React.useState<number>(0);
-  const [searchDays, setSearchDays] = React.useState<number>(0);
+ const [games,setGames] = React.useState<any>(0)
+ const [searchGames,setSearchGames] = React.useState<any>(0)
 
   return (
     <div>
@@ -119,16 +120,43 @@ const TeamPage = (id: any) => {
           </button>
         </div>
       </div>
+      <div className='flex flex-col w-full mx-auto justify-center items-center my-4 font-bold uppercase gap-4 mb-10'>
+
+        <h1>Min games on hero</h1>
+        <form
+        className='flex flex-col lg:flex-row gap-4 w-3/4 lg:w-full items-center justify-center' 
+        action="">
+          <input
+            type="number"
+            value={games}
+            className="bg-blue-500 p-4 rounded-lg text-black placeholder-black text-center"
+            placeholder="Min games on hero"
+            onChange={(e) => setGames(Number(e.target.value))}
+           
+          />
+          <button
+            type="submit"
+            onClick={(e) => {
+              e.preventDefault();
+              setSearchGames(
+                games)
+            }}
+            className="bg-blue-500 p-4 rounded-lg"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
       <div className='flex flex-col gap-10 lg:flex-row justify-between px-2 lg:px-10 items-center lg:items-baseline'>
         {Teams.map((team: any) => {
           if (Number(team.id) === Number(id.id)) {
             return (
               <>
-                <Player id={team.player1} date={date} lobby={lobby} />
-                <Player id={team.player2} date={date} lobby={lobby} />
-                <Player id={team.player3} date={date} lobby={lobby} />
-                <Player id={team.player4} date={date} lobby={lobby} />
-                <Player id={team.player5} date={date} lobby={lobby} />
+                <Player id={team.player1} date={date} lobby={lobby} games={searchGames}/>
+                <Player id={team.player2} date={date} lobby={lobby} games={searchGames}/>
+                <Player id={team.player3} date={date} lobby={lobby} games={searchGames}/>
+                <Player id={team.player4} date={date} lobby={lobby} games={searchGames}/>
+                <Player id={team.player5} date={date} lobby={lobby} games={searchGames}/>
               </>
             );
           }

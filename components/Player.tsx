@@ -6,6 +6,7 @@ type Props = {
   id: number;
   date: number;
   lobby: string;
+  games: number;
 };
 
 type PlayerData = {
@@ -25,14 +26,14 @@ type PlayerData = {
   messege: string;
 };
 
-async function getHeroes(id: number, date: number, lobby: string) {
+async function getHeroes(id: number, date: number, lobby: string , games: number) {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_SERVER_URL}/stratz/?id=${id}&date=${date}&gamemode=${lobby}`,
+    `${process.env.NEXT_PUBLIC_SERVER_URL}/stratz/?id=${id}&date=${date}&gamemode=${lobby}&matches=${games}`,
   );
   return res.json();
 }
 
-const Player = ({ id, date, lobby }: Props) => {
+const Player = ({ id, date, lobby , games}: Props) => {
   const [playerid, setPlayerId] = useState<any>(id);
   const [search, setSearch] = useState<any>(id);
 
@@ -42,8 +43,8 @@ const Player = ({ id, date, lobby }: Props) => {
     data: heroes,
     isLoading,
     error,
-  } = useQuery(['getHeroes', playerid, date, lobby], () =>
-    getHeroes(playerid, date, lobby),
+  } = useQuery(['getHeroes', playerid, date, lobby , games], () =>
+    getHeroes(playerid, date, lobby , games),
   );
 
   return (
