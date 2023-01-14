@@ -9,20 +9,19 @@ const HomePage = () => {
         return (
           <div className='flex flex-col gap-4' key={division.id}>
             <h1 className='text-3xl'>{division.name}</h1>
-            {division.teams.map((team: any) => {
-              return (
-                <div
-                  className='grid grid-cols-4 place-items-center mx-auto'
-                  key={team.id}
-                >
-                  <Link href={`/team/${team.id}`}>
-                    <button className='bg-blue-500 p-4 rounded-lg'>
-                      <h1 className='w-48'>{team.name}</h1>
-                    </button>
-                  </Link>
-                </div>
-              );
-            })}
+            <div className='grid grid-cols-1 gap-4 lg:grid-cols-4'>
+              {division.teams.map((team: any) => {
+                return (
+                  <div className=' mx-auto' key={team.id}>
+                    <Link href={`/team/${team.id}`}>
+                      <button className='bg-blue-500 p-4 rounded-lg'>
+                        <h1 className='w-48'>{team.name}</h1>
+                      </button>
+                    </Link>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         );
       })}
