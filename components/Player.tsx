@@ -26,14 +26,19 @@ type PlayerData = {
   messege: string;
 };
 
-async function getHeroes(id: number, date: number, lobby: string , games: number) {
+async function getHeroes(
+  id: number,
+  date: number,
+  lobby: string,
+  games: number,
+) {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_SERVER_URL}/stratz/?id=${id}&date=${date}&gamemode=${lobby}&matches=${games}`,
   );
   return res.json();
 }
 
-const Player = ({ id, date, lobby , games}: Props) => {
+const Player = ({ id, date, lobby, games }: Props) => {
   const [playerid, setPlayerId] = useState<any>(id);
   const [search, setSearch] = useState<any>(id);
 
@@ -43,8 +48,8 @@ const Player = ({ id, date, lobby , games}: Props) => {
     data: heroes,
     isLoading,
     error,
-  } = useQuery(['getHeroes', playerid, date, lobby , games], () =>
-    getHeroes(playerid, date, lobby , games),
+  } = useQuery(['getHeroes', playerid, date, lobby, games], () =>
+    getHeroes(playerid, date, lobby, games),
   );
 
   return (
@@ -55,7 +60,7 @@ const Player = ({ id, date, lobby , games}: Props) => {
           className='flex flex-col items-center gap-4 min-h-[70px]'
         >
           <input
-            className='border-2 border-black rounded-lg p-2 text-center w-3/4 '
+            className='border-2 border-black rounded-lg p-2 text-center w-3/4 text-[#151515]'
             type='text'
             name='id'
             id='id'
@@ -63,7 +68,7 @@ const Player = ({ id, date, lobby , games}: Props) => {
             onChange={(e) => setSearch(e.target.value)}
           />
           <button
-            className='border-2 bg-blue-500 text-white rounded-lg p-2'
+            className=' bg-[#252525] text-white rounded-lg p-2'
             type='submit'
             onClick={(e) => {
               e.preventDefault();
@@ -92,14 +97,14 @@ const Player = ({ id, date, lobby , games}: Props) => {
                 </h1>
               </div>
             ) : (
-              <div className='flex flex-col gap-4 mt-10   '>
+              <div className='flex flex-col gap-8 mt-10   '>
                 {heroes.map((hero: any) => (
                   <Link
                     href={`https://www.opendota.com/heroes/${hero.id}/matchups`}
                     key={hero.id}
                     className=''
                   >
-                    <div className='flex flex-col items-center shadow-lg text-xs lg:text-lg rounded-lg p-4  gap-2 font-semibold'>
+                    <div className='flex flex-col items-center shadow-lg shadow-[#252525] bg-[#252525] text-xs lg:text-lg rounded-lg p-4  gap-2 font-semibold'>
                       <h1 className='min-h-[70px] font-bold text-center'>
                         {hero.Name}
                       </h1>

@@ -14,7 +14,7 @@ const HomePage = () => {
                 return (
                   <div className=' mx-auto' key={team.id}>
                     <Link href={`/team/${team.id}`}>
-                      <button className='bg-blue-500 p-4 rounded-lg'>
+                      <button className='bg-[#252525] p-4 rounded-lg'>
                         <h1 className='w-48'>{team.name}</h1>
                       </button>
                     </Link>

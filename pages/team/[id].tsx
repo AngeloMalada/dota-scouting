@@ -24,7 +24,7 @@ const TeamPage = (id: any) => {
           <div className='flex flex-col gap-4 font-bold uppercase'>
             <div className='flex justify-center items-center'>
               <button
-                className='bg-blue-500 p-4 rounded-lg'
+                className='bg-[#252525] text-white p-4 rounded-lg'
                 onClick={() => setFilters(false)}
               >
                 Hide filters
@@ -36,7 +36,7 @@ const TeamPage = (id: any) => {
                 return (
                   <button
                     key={time.id}
-                    className='bg-blue-500 p-4 rounded-lg'
+                    className='bg-[#252525] text-white p-4 rounded-lg'
                     onClick={() => {
                       time.formula === 0
                         ? setDate(0)
@@ -56,7 +56,7 @@ const TeamPage = (id: any) => {
               >
                 <input
                   type='number'
-                  className='bg-blue-500 p-4 rounded-lg text-black placeholder-black text-center'
+                  className='bg-[#252525] text-white p-4 rounded-lg  placeholder-white text-center'
                   placeholder='Custom number of days'
                   onChange={(e) => setCustomDays(Number(e.target.value))}
                 />
@@ -69,7 +69,7 @@ const TeamPage = (id: any) => {
                         86400 * customDays,
                     );
                   }}
-                  className='bg-blue-500 p-4 rounded-lg 
+                  className='bg-[#252525] text-white p-4 rounded-lg 
         
       '
                 >
@@ -87,7 +87,7 @@ const TeamPage = (id: any) => {
                   <div>
                     <button
                       key={lobbies.id}
-                      className='bg-blue-500 p-4 rounded-lg'
+                      className='bg-[#252525] text-white p-4 rounded-lg'
                       onClick={() => setLobby(lobbies.value)}
                     >
                       {lobbies.name}
@@ -107,7 +107,7 @@ const TeamPage = (id: any) => {
               <input
                 type='number'
                 value={games}
-                className='bg-blue-500 p-4 rounded-lg text-black placeholder-black text-center'
+                className='bg-[#252525] text-white p-4 rounded-lg  placeholder-black text-center'
                 placeholder='Min games on hero'
                 onChange={(e) => setGames(Number(e.target.value))}
               />
@@ -117,7 +117,7 @@ const TeamPage = (id: any) => {
                   e.preventDefault();
                   setSearchGames(games);
                 }}
-                className='bg-blue-500 p-4 rounded-lg'
+                className='bg-[#252525] text-white p-4 rounded-lg'
               >
                 Submit
               </button>
@@ -127,7 +127,7 @@ const TeamPage = (id: any) => {
       ) : (
         <div className='flex justify-center items-center uppercase font-bold'>
           <button
-            className='bg-blue-500 p-4 rounded-lg'
+            className='bg-[#252525] text-white p-4 rounded-lg'
             onClick={() => setFilters(true)}
           >
             Filters
