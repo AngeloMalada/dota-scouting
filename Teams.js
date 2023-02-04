@@ -5,7 +5,7 @@ const Teams = {
       id: 1,
       teams: [
         {
-          name: 'Team vanilla',
+          name: 'vanilla',
           id: 1,
           players: [
             {
@@ -37,7 +37,7 @@ const Teams = {
         },
 
         {
-          name: 'Team SoLo',
+          name: 'SoLo',
           id: 2,
           players: [
             {
@@ -69,7 +69,7 @@ const Teams = {
         },
 
         {
-          name: 'Team Bonjwa',
+          name: 'Bonjwa',
           id: 3,
           players: [
             {
@@ -101,7 +101,7 @@ const Teams = {
         },
 
         {
-          name: 'Team Knaryaa',
+          name: 'Knaryaa',
           id: 4,
           players: [
             {
@@ -133,7 +133,7 @@ const Teams = {
         },
 
         {
-          name: 'Team ImBaSaRgArEpA',
+          name: 'ImBaSaRgArEpA',
           id: 5,
           players: [
             {
@@ -165,7 +165,7 @@ const Teams = {
         },
 
         {
-          name: 'Team legitsplit',
+          name: 'legitsplit',
           id: 6,
           players: [
             {
@@ -464,257 +464,257 @@ const Teams = {
       id: 3,
       teams: [
         {
-          name: 'DominicS',
+          name: 'Nullagon',
           id: 1,
           players: [
             {
-              name: 'DominicS',
+              name: 'Nullagon',
               id: 1,
-              accountID: 56404086,
+              accountID: 59155507,
             },
             {
-              name: 'Big Gunson',
+              name: 'Lgy',
               id: 2,
-              accountID: 106742399,
+              accountID: 72407726,
             },
             {
-              name: 'Ondrej',
+              name: 'Reformation',
               id: 3,
-              accountID: 150031206,
+              accountID: 101035027,
             },
             {
-              name: 'Olaf',
+              name: 'Jh',
               id: 4,
-              accountID: 187137003,
+              accountID: 99374795,
             },
             {
-              name: 'TheProblem',
+              name: 'DarkShokBlade',
               id: 5,
-              accountID: 249248089,
+              accountID: 119777741,
             },
           ],
         },
 
         {
-          name: 'Büö',
+          name: 'kaldrama',
           id: 2,
           players: [
             {
-              name: 'Büö',
+              name: 'kaldrama',
               id: 1,
-              accountID: 279050958,
+              accountID: 251347639,
             },
             {
-              name: 'zGrozemaG',
+              name: 'Ruski',
               id: 2,
-              accountID: 38319872,
+              accountID: 252657179,
             },
             {
-              name: 'Bianco',
+              name: 'hi5',
               id: 3,
-              accountID: 71375201,
+              accountID: 49567307,
             },
             {
-              name: 'Dodo',
+              name: 'naitru',
               id: 4,
-              accountID: 42710307,
+              accountID: 167445998,
             },
             {
-              name: 'Ginger',
+              name: 'Pappila',
               id: 5,
-              accountID: 464676703,
+              accountID: 417207821,
             },
           ],
         },
 
         {
-          name: 'Petchef',
+          name: 'Yaz',
           id: 3,
           players: [
             {
-              name: 'Petchef',
+              name: 'Yaz',
               id: 1,
-              accountID: 49120950,
+              accountID: 184869837,
             },
             {
-              name: 'Raytoran',
+              name: 'Leiya',
               id: 2,
-              accountID: 40625516,
+              accountID: 65159250,
             },
             {
-              Flame: 'Bianco',
+              Flame: 'Gal',
               id: 3,
-              accountID: 101465865,
+              accountID: 340261787,
             },
             {
-              name: 'greenman',
+              name: 'Pajazo',
               id: 4,
-              accountID: 73877347,
+              accountID: 47768835,
             },
             {
-              name: 'Lil-Rob2009',
+              name: 'Bernard humperdink',
               id: 5,
-              accountID: 59174607,
+              accountID: 23765698,
             },
           ],
         },
 
         {
-          name: 'Adi',
+          name: 'HungryBrowny',
           id: 4,
           players: [
             {
-              name: 'Adi',
+              name: 'HungryBrowny',
               id: 1,
-              accountID: 151517806,
+              accountID: 89873399,
             },
             {
-              name: 'Grief',
+              name: 'canin',
               id: 2,
-              accountID: 302449792,
+              accountID: 78114459,
             },
             {
-              Flame: 'kotklopot',
+              Flame: 'Dimes',
               id: 3,
-              accountID: 243368997,
+              accountID: 41403942,
             },
             {
-              name: 'Morgs',
+              name: 'Azg',
               id: 4,
-              accountID: 180895009,
+              accountID: 106706457,
             },
             {
-              name: 'LookAlive',
+              name: 'Luke',
               id: 5,
-              accountID: 220385033,
+              accountID: 150522382,
             },
           ],
         },
 
         {
-          name: 'BarryBeeDespair',
+          name: 'Marty',
           id: 5,
           players: [
             {
-              name: 'BarryBeeDespair',
+              name: 'Marty',
               id: 1,
-              accountID: 89681488,
+              accountID: 88342733,
             },
             {
-              name: 'sham',
+              name: 'Daftcunt',
               id: 2,
-              accountID: 253571081,
+              accountID: 69119093,
             },
             {
-              Flame: 'wewlad#6341',
+              Flame: 'loo',
               id: 3,
-              accountID: 54024614,
+              accountID: 199498251,
             },
             {
-              name: 'Regurgitard',
+              name: 'iwashomeanyway',
               id: 4,
-              accountID: 84712191,
+              accountID: 95033645,
             },
             {
-              name: 'Spas',
+              name: 'XIIBULLETS',
               id: 5,
-              accountID: 141104117,
+              accountID: 89507638,
             },
           ],
         },
 
         {
-          name: 'Syrphx',
+          name: 'Eeshie',
           id: 6,
           players: [
             {
-              name: 'Syrphx',
+              name: 'Eeshie',
               id: 1,
-              accountID: 327434422,
+              accountID: 94550441,
             },
             {
-              name: 'Mikel',
+              name: 'GrimR',
               id: 2,
-              accountID: 27997450,
+              accountID: 69347241,
             },
             {
-              Flame: 'Haisu :)',
+              Flame: 'caiser101',
               id: 3,
-              accountID: 102346907,
+              accountID: 182730622,
             },
             {
-              name: 'Rinku',
+              name: 'Bogisa',
               id: 4,
-              accountID: 125847008,
+              accountID: 157346177,
             },
             {
-              name: 'Owl',
+              name: 'Swagboi',
               id: 5,
-              accountID: 188263974,
+              accountID: 59488464,
             },
           ],
         },
 
         {
-          name: 'Tal',
+          name: 'lil o.g.',
           id: 7,
           players: [
             {
-              name: 'Tal',
+              name: 'lil o.g.',
               id: 1,
-              accountID: 81581521,
+              accountID: 30428142,
             },
             {
-              name: 'Shaked',
+              name: 'Yesketchup',
               id: 2,
-              accountID: 98027915,
+              accountID: 53555116,
             },
             {
-              Flame: 'Denden',
+              Flame: 'sakoh',
               id: 3,
-              accountID: 17120982,
+              accountID: 125477453,
             },
             {
-              name: 'gladp',
+              name: 'Moggoblin',
               id: 4,
-              accountID: 94011129,
+              accountID: 105128443,
             },
             {
-              name: 'KhezuC',
+              name: 'Vade',
               id: 5,
-              accountID: 106497878,
+              accountID: 28888813,
             },
           ],
         },
 
         {
-          name: 'GRIMM',
+          name: 'Lightning',
           id: 8,
           players: [
             {
-              name: 'GRIMM',
+              name: 'Lightning',
               id: 1,
-              accountID: 55866317,
+              accountID: 376256780,
             },
             {
-              name: '5YN3R6Y',
+              name: 'Fred Astaire',
               id: 2,
-              accountID: 118379443,
+              accountID: 71904413,
             },
             {
-              Flame: 'iggy',
+              Flame: 'KarlTheCommie',
               id: 3,
-              accountID: 859609158,
+              accountID: 106401172,
             },
             {
-              name: 'Killerpanda',
+              name: 'Nothing',
               id: 4,
-              accountID: 61634693,
+              accountID: 256219495,
             },
             {
-              name: 'Aronix',
+              name: 'Nate',
               id: 5,
-              accountID: 108164252,
+              accountID: 65341388,
             },
           ],
         },

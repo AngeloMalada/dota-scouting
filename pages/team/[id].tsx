@@ -13,7 +13,7 @@ const TeamPage = (id: any) => {
   );
   const [lobby, setLobby] = React.useState<string>('7,1,0');
   const [customDays, setCustomDays] = React.useState<number>(0);
-  const [games, setGames] = React.useState<any>(0);
+  const [games, setGames] = React.useState<any>(1);
   const [searchGames, setSearchGames] = React.useState<any>(0);
   const [filters, setFilters] = React.useState<boolean>(false);
 
