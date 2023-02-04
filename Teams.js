@@ -203,7 +203,7 @@ const Teams = {
       teams: [
         {
           name: 'DominicS',
-          id: 1,
+          id: 7,
           players: [
             {
               name: 'DominicS',
@@ -235,7 +235,7 @@ const Teams = {
 
         {
           name: 'Büö',
-          id: 2,
+          id: 8,
           players: [
             {
               name: 'Büö',
@@ -267,7 +267,7 @@ const Teams = {
 
         {
           name: 'Petchef',
-          id: 3,
+          id: 9,
           players: [
             {
               name: 'Petchef',
@@ -299,7 +299,7 @@ const Teams = {
 
         {
           name: 'Adi',
-          id: 4,
+          id: 10,
           players: [
             {
               name: 'Adi',
@@ -331,7 +331,7 @@ const Teams = {
 
         {
           name: 'BarryBeeDespair',
-          id: 5,
+          id: 11,
           players: [
             {
               name: 'BarryBeeDespair',
@@ -363,7 +363,7 @@ const Teams = {
 
         {
           name: 'Syrphx',
-          id: 6,
+          id: 12,
           players: [
             {
               name: 'Syrphx',
@@ -395,7 +395,7 @@ const Teams = {
 
         {
           name: 'Tal',
-          id: 7,
+          id: 13,
           players: [
             {
               name: 'Tal',
@@ -427,7 +427,7 @@ const Teams = {
 
         {
           name: 'GRIMM',
-          id: 8,
+          id: 14,
           players: [
             {
               name: 'GRIMM',
@@ -465,7 +465,7 @@ const Teams = {
       teams: [
         {
           name: 'Nullagon',
-          id: 1,
+          id: 15,
           players: [
             {
               name: 'Nullagon',
@@ -497,7 +497,7 @@ const Teams = {
 
         {
           name: 'kaldrama',
-          id: 2,
+          id: 16,
           players: [
             {
               name: 'kaldrama',
@@ -529,7 +529,7 @@ const Teams = {
 
         {
           name: 'Yaz',
-          id: 3,
+          id: 17,
           players: [
             {
               name: 'Yaz',
@@ -561,7 +561,7 @@ const Teams = {
 
         {
           name: 'HungryBrowny',
-          id: 4,
+          id: 18,
           players: [
             {
               name: 'HungryBrowny',
@@ -593,7 +593,7 @@ const Teams = {
 
         {
           name: 'Marty',
-          id: 5,
+          id: 19,
           players: [
             {
               name: 'Marty',
@@ -625,7 +625,7 @@ const Teams = {
 
         {
           name: 'Eeshie',
-          id: 6,
+          id: 20,
           players: [
             {
               name: 'Eeshie',
@@ -657,7 +657,7 @@ const Teams = {
 
         {
           name: 'lil o.g.',
-          id: 7,
+          id: 21,
           players: [
             {
               name: 'lil o.g.',
@@ -689,7 +689,7 @@ const Teams = {
 
         {
           name: 'Lightning',
-          id: 8,
+          id: 22,
           players: [
             {
               name: 'Lightning',
